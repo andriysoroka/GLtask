@@ -4,7 +4,6 @@ menuBlock = document.getElementsByClassName('menu')[0];
 
 menuList = document.createElement('ul');
 
-//document.getElementsByTagName("HTML")[0].setAttribute("onmousedown", "menuToggle(event)");
 menuBlock.appendChild(menuList);
 
 function getMenu() {
@@ -44,7 +43,6 @@ function shovMenuItems(menuItems, menuList) {
 
             arrow.setAttribute('class', 'arrow');
             subMenu.setAttribute('class', 'sub-menu');
-            //menuItem.setAttribute("onmousedown", "itemToggle(event)");
 
             menuItem.appendChild(arrow);
             menuItem.appendChild(subMenu);
@@ -54,7 +52,6 @@ function shovMenuItems(menuItems, menuList) {
 }
 
 
-//function menuToggle(event) {
 window.addEventListener('mouseup', function (event) {
     console.log(event);
     if (event.button === 2 && event.target.parentNode != menuList) {
@@ -70,20 +67,5 @@ window.addEventListener('mouseup', function (event) {
     }
 });
 
-//function itemToggle(event) {
-//    console.log(event.target.children);
-//    if (event.button === 2 ) {
-//        var a = event.target.children[event.target.children.length - 1];
-//        a.classList.toggle('show-sub-menu');
-//        console.log(event.target.children[1]);
-//    } 
-//}
-
-
-//window.addEventListener('mouseup', function (event) {
-//    if (event.button === 2 && event.target != menuList && event.target.parentNode != menuList) {
-//        menuList.classList.remove('show-menu');
-//    }
-//});
 
 getMenu();
