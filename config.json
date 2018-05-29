@@ -1,0 +1,95 @@
+{
+  "menu": {
+    "items": [
+      {
+        "hendler": "",
+        "title": "title-1",
+        "isDisabled": false,
+        "submenu": ""
+      },
+      {
+        "hendler": "",
+        "title": "title-2",
+        "isDisabled": false,
+        "submenu": [
+          {
+            "hendler": "",
+            "title": "title-2-1",
+            "isDisabled": false,
+            "submenu": ""
+          },
+          {
+            "hendler": "",
+            "title": "title-2-2",
+            "isDisabled": false,
+            "submenu": ""
+          }
+        ]
+      },
+      {
+        "hendler": "",
+        "title": "title-3",
+        "isDisabled": false,
+        "submenu": [
+          {
+            "hendler": "",
+            "title": "title-3-1",
+            "isDisabled": false,
+            "submenu": [
+              {
+                "hendler": "",
+                "title": "title-3-1-1",
+                "isDisabled": false,
+                "submenu": ""
+              }
+            ]
+          },
+          {
+            "hendler": "",
+            "title": "title-3-2",
+            "isDisabled": false,
+            "submenu": [
+              {
+                "hendler": "",
+                "title": "title-3-2-1",
+                "isDisabled": false,
+                "submenu": ""
+              },
+              {
+                "hendler": "",
+                "title": "title-3-2-2",
+                "isDisabled": false,
+                "submenu": [
+                  {
+                    "hendler": "",
+                    "title": "title-3-2-2-1",
+                    "isDisabled": false,
+                    "submenu": ""
+                  },
+                  {
+                    "hendler": "",
+                    "title": "title-3-2-2-2",
+                    "isDisabled": false,
+                    "submenu": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "hendler": "",
+        "title": "title-4",
+        "isDisabled": false,
+        "submenu": ""
+      },
+      {
+        "hendler": "",
+        "title": "title-5",
+        "isDisabled": false,
+        "submenu": ""
+      }
+    ]
+  }
+}
