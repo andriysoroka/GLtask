@@ -1,13 +1,10 @@
-﻿var menu, menuButton, menuList, menuItems, menuBlock, menuItem, itemTitle, subMenu, arrow;
+﻿var menu, menuList, menuItems, menuBlock, menuItem, itemTitle, subMenu, arrow;
 
 menuBlock = document.getElementsByClassName('menu')[0];
 
 menuList = document.createElement('ul');
-menuButton = document.createElement('button');
 
-menuButton.appendChild(document.createTextNode("menu"));
-menuButton.setAttribute("onmousedown", "menuToggle(event)");
-menuBlock.appendChild(menuButton);
+//document.getElementsByTagName("HTML")[0].setAttribute("onmousedown", "menuToggle(event)");
 menuBlock.appendChild(menuList);
 
 function getMenu() {
@@ -47,7 +44,7 @@ function shovMenuItems(menuItems, menuList) {
 
             arrow.setAttribute('class', 'arrow');
             subMenu.setAttribute('class', 'sub-menu');
-            menuItem.setAttribute("onmousedown", "itemToggle(event)");
+            //menuItem.setAttribute("onmousedown", "itemToggle(event)");
 
             menuItem.appendChild(arrow);
             menuItem.appendChild(subMenu);
@@ -56,29 +53,37 @@ function shovMenuItems(menuItems, menuList) {
     });
 }
 
-function menuToggle(event) {
-    if (event.button === 2 && event.target == menuButton) {
+
+//function menuToggle(event) {
+window.addEventListener('mouseup', function (event) {
+    console.log(event);
+    if (event.button === 2 && event.target.parentNode != menuList) {
         menuList.style.top = event.clientY + 'px';
         menuList.style.left = event.clientX + 'px';
 
-        menuList.classList.toggle('show-menu');
+        menuList.classList.add('show-menu');
+        return;
         //console.log(event);
-    }
-}
-
-function itemToggle(event) {
-    console.log(event.target.children);
-    if (event.button === 2 ) {
-        var a = event.target.children[event.target.children.length - 1];
-        a.classList.toggle('show-sub-menu');
-        console.log(event.target.children[1]);
-    } 
-}
-
-window.addEventListener('mouseup', function (event) {
-    if (event.button === 2 && event.target != menuList && event.target.parentNode != menuList) {
+    } else if (event.button === 0 && event.target != menuList && event.target.parentNode != menuList) {
         menuList.classList.remove('show-menu');
+        return;
     }
 });
+
+//function itemToggle(event) {
+//    console.log(event.target.children);
+//    if (event.button === 2 ) {
+//        var a = event.target.children[event.target.children.length - 1];
+//        a.classList.toggle('show-sub-menu');
+//        console.log(event.target.children[1]);
+//    } 
+//}
+
+
+//window.addEventListener('mouseup', function (event) {
+//    if (event.button === 2 && event.target != menuList && event.target.parentNode != menuList) {
+//        menuList.classList.remove('show-menu');
+//    }
+//});
 
 getMenu();
